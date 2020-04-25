@@ -5,6 +5,7 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from flask import make_response
+from flask import send_file
 app = Flask(__name__)
 
 @app.route('/')
@@ -18,11 +19,14 @@ def register():
     print(result['name'])
     return render_template('registration.html')
 
-#@app.route('/img/<img_name>')
-#def img(img_name):
-    #response = make_response('./img/python.png')
-    #response.mimetype = "image/bmp"
-    #return render_template('img.html', myImg=img_name)
+@app.route('/static/<file_name>')
+def DownLoads(file_name):
+    return send_file('./static/img/{}.jpg'.format(file_name), attachment_filename='{}.jpg'.format(file_name))
+
+#Doesn't know if the route must send any static file or only images, and if it's enough to return them or downloads it's mandatory
+#@app.route('/static/<file_name>')
+#def img(file_name):
+    #return send_file('./static/{}'.format(file_name), attachment_filename='{}'.format(file_name))
 
 if __name__ == "__main__":
     app.run(debug=True)
