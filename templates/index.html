@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="Window">
+    <div class="Global">
+        <form action="http://localhost:5000/register" method="post" id="myForm">
+            <label>First Name</label> <br />
+            <input type="text" name="name" placeholder="Your Name" /><br />
+            <label>Last Name</label><br />
+            <input type="text" name="lastname" placeholder="Your Last Name" /><br />
+            <label>Password</label><br />
+            <input type="text" name="password" placeholder="Your Password" /><br />
+            <input type="submit" value="Submit"/>
+        </form>
+    </div>
+    <div class="Global">
+        <img src="../static/img/Python.jpg" width="50%" height="50%" id="myImg"/>
+    </div>
+    </div>
+</body>
+</html>
+

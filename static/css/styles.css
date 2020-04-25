@@ -1,0 +1,31 @@
+div.Window {
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    box-shadow: 8px 8px 0px #aaaaaa;
+    border: solid 1px #000000;
+}
+
+div.Global {
+    display: inline-block;
+    height: 80%;
+    width: 45%;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    display: inline-block;
+    width: 145px;
+    text-align: left;
+}
+
+#myForm{
+    margin: 0 auto;
+}
+
+#myImg{
+    margin: 0 auto;
+}
+
